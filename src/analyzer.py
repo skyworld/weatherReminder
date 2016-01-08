@@ -1,14 +1,10 @@
 # -- coding: UTF-8
-import sys,re
-reload(sys)
-sys.setdefaultencoding("utf-8")
-
+import re
 
 class analyzer:
 	
 	# 要被分析的数据文件 	
 	_dataFile = '';
-
 
 	# 构造函数，fileName传入要被分析的数据文件
 	def __init__(self, fileName):
@@ -32,7 +28,6 @@ class analyzer:
 
 	# 判断是否有雨
 	def hasRain(self, str):
-		#if str.find(u'雨') != -1 or str.find(u'冰雹') != -1 or str.find(u'雷暴') != -1:
 		if str.find('雨') != -1 or str.find('冰雹') != -1 or str.find('雷暴') != -1:
 			return True
 		else:
@@ -46,9 +41,9 @@ class analyzer:
 		pt = re.compile(r'date:(.*?) day:(.*?) day_temperature:(\d+) night:(.*?),night_temperature:(\d+)',re.S)
 		yesterdayInfo = pt.findall(lastLines[0])
 		todayInfo = pt.findall(lastLines[1])
-
-		print ('yesterdayInfo: %s' % lastLines[0])
-		print ('todayInfo: %s' % lastLines[1])
+		
+		#print ('yesterdayInfo: %s' % lastLines[0])
+		#print ('todayInfo: %s' % lastLines[1])
 
 		# 昨天的天气信息
 		y_date = yesterdayInfo[0][0]	
@@ -71,7 +66,7 @@ class analyzer:
 
 		# 如果昨天没下雨，今天下雨了需要提醒
 		# 如果连续下雨，提醒也没啥意义，不提醒了
-		rainRemind = (yesterdayInfo == False and todayHasRain == True)
+		rainRemind = (yesterdayHasRain == False and todayHasRain == True)
 
 
 		# 大幅降温提醒
@@ -95,12 +90,9 @@ class analyzer:
 			if rainRemindStr == '' or tempertureRemindStr == '':
 				remindStr = rainRemindStr+tempertureRemindStr+'！by 爱你的XXXX n(*≧▽≦*)n'
 			else:
-				remindStr = rainRemindStr+'并且'+tempertureRemindStr+'！by 爱你的XXXX n(*≧▽≦*)n'
+				remindStr = rainRemindStr+'，并且'+tempertureRemindStr+'！by 爱你的XXXX n(*≧▽≦*)n'
 			msg = {'code':0,'msg':remindStr}
 			return msg
-
-
-an = analyzer('data/101020100.weather')
-print an.run();
-
-
+			
+#an = analyzer('data/101020100.weather')
+#print an.run();
