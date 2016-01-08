@@ -81,18 +81,16 @@ class analyzer:
 			rainRemindStr = '';
 			tempertureRemindStr = ''
 			if rainRemind == True:
-				rainRemindStr = '明天会有雨哦，记得带伞出门'
+				rainRemindStr = '今天会有雨哦，记得带伞出门'
 
 			if maxTempertureDiff >= 5:
-				tempertureRemindStr = '明天会有大幅降温哦，记得多穿一点，别着凉感冒了'
+				tempertureRemindStr = '今天会有大幅降温哦，记得多穿一点，别着凉感冒了'
 
 			remindStr = '';
 			if rainRemindStr == '' or tempertureRemindStr == '':
-				remindStr = rainRemindStr+tempertureRemindStr+'！by 爱你的XXXX n(*≧▽≦*)n'
+				remindStr = rainRemindStr+tempertureRemindStr+'！by 爱你的庚庚 n(*≧▽≦*)n'
 			else:
-				remindStr = rainRemindStr+'，并且'+tempertureRemindStr+'！by 爱你的XXXX n(*≧▽≦*)n'
+				remindStr = rainRemindStr+'，并且'+tempertureRemindStr+'！by 爱你的庚庚 n(*≧▽≦*)n'
 			msg = {'code':0,'msg':remindStr}
 			return msg
 			
-#an = analyzer('data/101020100.weather')
-#print an.run();
