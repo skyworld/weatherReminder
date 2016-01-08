@@ -1,5 +1,5 @@
 # -- coding: UTF-8
-import socket,re
+import socket,re,sys
 from analyzer import analyzer
 
 
@@ -12,7 +12,7 @@ listen_socket.bind((HOST, PORT))
 listen_socket.listen(1)
 print 'Serving HTTP on port %s ...' % PORT
 
-
+#print sys.path[0]
 
 while True:
 	client_connection, client_address = listen_socket.accept()
@@ -22,7 +22,7 @@ while True:
 	
 	http_response = '{"code":"-1", "msg":"Access Denied", "data":""}';
 	if len(match) != 0 and match[0] == 'get':
-		analyzerTool = analyzer('data/%s.weather' % city_code)
+		analyzerTool = analyzer('%s/data/%s.weather' % (sys.path[0],city_code))
 		msg = analyzerTool.run();
 		print msg
 		if msg['code'] == -1:
