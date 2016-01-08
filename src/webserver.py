@@ -22,13 +22,15 @@ while True:
 	
 	http_response = '{"code":"-1", "msg":"Access Denied", "data":""}';
 	if len(match) != 0 and match[0] == 'get':
-		analyzerTool = analyzer('%s/data/%s.weather' % (sys.path[0],city_code))
-		msg = analyzerTool.run();
-		print msg
-		if msg['code'] == -1:
-			http_response = '{"code":"-2", "msg":"no thing to remind", "data":""}';
-		else:
-			http_response = '{"code":"0", "msg":"%s", "data":""}' % msg['msg'];
-	
+		try:
+			analyzerTool = analyzer('%s/data/%s.weather' % (sys.path[0],city_code))
+			msg = analyzerTool.run();
+			print msg
+			if msg['code'] == -1:
+				http_response = '{"code":"-2", "msg":"no thing to remind", "data":""}';
+			else:
+				http_response = '{"code":"0", "msg":"%s", "data":""}' % msg['msg'];
+		except:
+			http_response = '{"code":"-3", "msg":"Unknow Error", "data":""}';
 	client_connection.sendall(http_response)
 	client_connection.close()
