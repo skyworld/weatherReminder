@@ -20,7 +20,7 @@ while hasError == True and try_cnt < 10:
 		print ret
 		try:
 			if ret['code'] == '0':
-				paramsDic = {'c':'Skyoption','act':'sms','rec':'18818219332;18502115234','title':'hi darling', 'content':ret['msg']}
+				paramsDic = {'c':'Skyoption','act':'sms','rec':'188*******;188*******','title':'hi darling', 'content':ret['msg']}
 				params = urllib.urlencode(paramsDic) 
 				send_url = 'http://p.addev.com/php/daemon/index.php?%s' % params
 				req = urllib2.Request(send_url.encode('utf8'))
