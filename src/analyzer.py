@@ -75,7 +75,7 @@ class analyzer:
 
 		# 开始处理消息提醒
 		msg= {'code':-1,'msg':'nothing to remind'}
-		if rainRemind == False and maxTempertureDiff < 5:
+		if rainRemind == False and maxTempertureDiff < 4:
 			return msg
 		else:
 			rainRemindStr = '';
@@ -83,7 +83,7 @@ class analyzer:
 			if rainRemind == True:
 				rainRemindStr = '今天会有雨哦，记得带伞出门'
 
-			if maxTempertureDiff >= 5:
+			if maxTempertureDiff >= 4:
 				tempertureRemindStr = '今天会有大幅降温哦，记得多穿一点，别着凉感冒了'
 
 			remindStr = '';
