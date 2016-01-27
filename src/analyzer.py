@@ -103,10 +103,10 @@ class analyzer:
 			rainRemindStr = '';
 			tempertureRemindStr = ''
 			if rainRemind == True:
-				rainRemindStr = '明天会有雨哦，记得带伞出门'
+				rainRemindStr = '今天会有雨哦，记得带伞出门'
 
 			if maxTempertureDiff >= 4:
-				tempertureRemindStr = '明天会有大幅降温哦，记得多穿一点，别着凉感冒了'
+				tempertureRemindStr = '今天会有大幅降温哦，记得多穿一点，别着凉感冒了'
 
 			remindStr = '';
 			if rainRemindStr == '' or tempertureRemindStr == '':
