@@ -26,9 +26,9 @@ while has_error == True and try_cnt < 10:
                 		night = forecast['cond']['txt_n']
 				day_temperature = forecast['tmp']['max']
                 		night_temperature = forecast['tmp']['min']
-               		 	print ('day:%s day_temperature:%s night:%s,night_temperature:%s'%(day, day_temperature, night, night_temperature))
+               		 	print ('day:%s day_temperature:%s night:%s night_temperature:%s'%(day, day_temperature, night, night_temperature))
                 		fp = open('%s/data/%s.weather'%(sys.path[0],city_code),'a+')
-                		fp.write('date:%s day:%s day_temperature:%s night:%s,night_temperature:%s\r\n'%(date.today() ,day, day_temperature, night, night_temperature))
+                		fp.write('date:%s day:%s day_temperature:%s night:%s night_temperature:%s\r\n'%(date.today() ,day, day_temperature, night, night_temperature))
                 		fp.close()
 
 			else:

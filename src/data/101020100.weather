@@ -1,5 +1,20 @@
-date:2016-01-07 day:多云 day_temperature:16 night:多云,night_temperature:2
-date:2016-01-08 day:多云 day_temperature:8 night:多云,night_temperature:2
-date:2016-01-09 day:多云 day_temperature:9 night:小雨,night_temperature:6
-date:2016-01-11 day:小雨 day_temperature:9 night:小雨,night_temperature:4
-date:2016-01-12 day:阴 day_temperature:5 night:多云,night_temperature:1
+date:2016-01-07 day:多云 day_temperature:16 night:多云 night_temperature:2
+date:2016-01-08 day:多云 day_temperature:8 night:多云 night_temperature:2
+date:2016-01-09 day:多云 day_temperature:9 night:小雨 night_temperature:6
+date:2016-01-11 day:小雨 day_temperature:9 night:小雨 night_temperature:4
+date:2016-01-12 day:阴 day_temperature:5 night:多云 night_temperature:1
+date:2016-01-13 day:多云 day_temperature:6 night:多云 night_temperature:0
+date:2016-01-14 day:多云 day_temperature:7 night:多云 night_temperature:1
+date:2016-01-15 day:晴 day_temperature:15 night:多云 night_temperature:3
+date:2016-01-16 day:多云 day_temperature:13 night:雨 night_temperature:3
+date:2016-01-17 day:毛毛雨/细雨 day_temperature:9 night:小雨 night_temperature:5
+date:2016-01-18 day:晴 day_temperature:7 night:多云 night_temperature:2
+date:2016-01-19 day:晴 day_temperature:6 night:晴 night_temperature:-1
+date:2016-01-20 day:阴 day_temperature:6 night:多云 night_temperature:0
+date:2016-01-21 day:毛毛雨/细雨 day_temperature:7 night:雨夹雪 night_temperature:2
+date:2016-01-22 day:雨夹雪 day_temperature:6 night:小雨 night_temperature:2
+date:2016-01-23 day:晴 day_temperature:-2 night:雨夹雪 night_temperature:0
+date:2016-01-24 day:晴 day_temperature:-3 night:晴 night_temperature:-6
+date:2016-01-25 day:晴 day_temperature:2 night:晴 night_temperature:-5
+date:2016-01-26 day:晴 day_temperature:10 night:晴 night_temperature:-2
+date:2016-01-27 day:小雨 day_temperature:7 night:中雨 night_temperature:4

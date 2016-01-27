@@ -30,7 +30,8 @@ while True:
 				http_response = '{"code":"-2", "msg":"no thing to remind", "data":""}';
 			else:
 				http_response = '{"code":"0", "msg":"%s", "data":""}' % msg['msg'];
-		except:
+		except Exception,e:
+			print e;
 			http_response = '{"code":"-3", "msg":"Unknow Error", "data":""}';
 	client_connection.sendall(http_response)
 	client_connection.close()
