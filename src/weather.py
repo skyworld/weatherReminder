@@ -13,7 +13,7 @@ try_cnt = 0;
 
 while hasError == True and try_cnt < 10:
 	try:
-		weather_url = 'http://wzc.shnow.cn:8888/get'
+		weather_url = 'http://xxx.xxx.cn:8888/get'
 		filehandle = urllib.urlopen(weather_url, proxies=proxies)
 		content = filehandle.read()
 		ret = json.loads(content)
